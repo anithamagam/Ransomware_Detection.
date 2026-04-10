@@ -1,11 +1,13 @@
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+import os
 
 app = FastAPI()
 
-# Serve frontend folder
-
 @app.get("/")
 def serve_ui():
-    return FileResponse("frontend/index.html")
+    return FileResponse("index.html")
+
+@app.get("/files")
+def files():
+    return os.listdir()
