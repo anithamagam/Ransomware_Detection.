@@ -5,7 +5,6 @@ from fastapi.responses import FileResponse
 app = FastAPI()
 
 # Serve frontend folder
-app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
 @app.get("/")
 def serve_ui():
