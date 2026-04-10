@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 def serve_ui():
-    return FileResponse("index.html")
+    return FileResponse("frontend/index.html")
 
 @app.get("/files")
 def files():
