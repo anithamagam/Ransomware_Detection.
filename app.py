@@ -10,7 +10,7 @@ from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
-from MachineLearningModule import MachineLearningFlow
+from MachineLearningModule.MachineLearningFlow import MachineLearningFlow
 from FeatureExtractionModule import FeatureExtraction
 
 app = FastAPI(title="Android Malware Detection API")
